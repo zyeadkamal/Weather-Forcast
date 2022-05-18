@@ -31,4 +31,19 @@
     <string name="celsius">سليسيز</string>
     <string name="fahrenheit">فيهرنهايت</string>
     <string name="kelvin">كيلفن</string>
+    <string name="addAlert">اضافة تنبيه</string>
+    <string name="alertDuration">مدة التنبيه</string>
+    <string name="from">من</string>
+    <string name="to">الى</string>
+    <string name="alertTime">وقت التنبيه</string>
+    <string name="time">الوقت</string>
+    <string name="alertType">نوع التنبيه</string>
+    <string name="Notification">اشعار</string>
+    <string name="Alarm">منبه</string>
+    <string name="add">اضافة</string>
+    <string name="overlay_title">طلب السماحية</string>
+    <string name="overlay_postive_button">تم</string>
+    <string name="overlay_negative_button">اغلاق</string>
+    <string name="fillRequired">من فضلك قم بملئ الفراغات</string>
+    <string name="dismiss">تجاهل</string>
 </resources>

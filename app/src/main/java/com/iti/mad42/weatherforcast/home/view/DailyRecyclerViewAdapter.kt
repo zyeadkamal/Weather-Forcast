@@ -39,7 +39,7 @@ class DailyRecyclerViewAdapter : RecyclerView.Adapter<DailyRecyclerViewAdapter.M
 
     fun setValuesFromSharedPreferences(context: Context) {
         getSharedPreferences(context).apply {
-            language = getString(context.getString(R.string.languageSetting), "en") ?: "en"
+            language = getString("languageSetting", "en") ?: "en"
             units = getString(context.getString(R.string.unitsSetting), "metric") ?: "metric"
         }
     }

@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.iti.mad42.weatherforcast.Utilities.getCurrentLocale
 import com.iti.mad42.weatherforcast.Utilities.getSharedPreferences
 import com.iti.mad42.weatherforcast.alerts.alertsRecyclerView.view.AlertsFragment
 import com.iti.mad42.weatherforcast.favourites.favouritesRecyclerView.view.FavouritesFragment
@@ -31,9 +30,7 @@ class MainActivity : AppCompatActivity() {
         replaceFragments(homeFragment)
         setNavigationItemListeners()
 
-        val localLang = getCurrentLocale(this)
-        val languageLocale = getSharedPreferences(this).getString(
-            getString(R.string.languageSetting), localLang?.language) ?: localLang?.language
+        val languageLocale = getSharedPreferences(this).getString("languageSetting","en")!!
         setLocale(languageLocale!!)
 
     }

@@ -99,10 +99,8 @@ class HomeFragment : Fragment() {
         if (isAppOnline){
 
             val local = getCurrentLocale(requireContext())
-            val language = getSharedPreferences(requireContext()).getString(
-                getString(R.string.languageSetting),
-                local?.language
-            )!!
+            val language = getSharedPreferences(requireContext()).getString("languageSetting","ar")!!
+            Log.e("language", "onViewCreated: $language" )
             println(language)
             val units = getSharedPreferences(requireContext()).getString(
                 getString(R.string.unitsSetting),
@@ -207,7 +205,7 @@ class HomeFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     private fun setData(weather: WeatherApi) {
 
-        val language = getSharedPreferences(requireContext()).getString(getString(R.string.languageSetting),"en")!!
+        val language = getSharedPreferences(requireContext()).getString("languageSetting","en")!!
         val units = getSharedPreferences(requireContext()).getString(getString(R.string.unitsSetting),"metric")!!
 
         when(language) {
@@ -246,8 +244,6 @@ class HomeFragment : Fragment() {
         dailyRecyclerViewAdapter.notifyDataSetChanged()
         hourlyRecyclerViewAdapter.listOfHourlyTemps = weather.hourly
         hourlyRecyclerViewAdapter.notifyDataSetChanged()
-
-
 
     }
 

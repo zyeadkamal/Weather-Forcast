@@ -37,7 +37,7 @@ class AlertsRecyclerViewAdapter(private var onClickDeleteAlertListener: OnClickD
 
     fun setValuesFromSharedPreferences(context: Context) {
         getSharedPreferences(context).apply {
-            language = getString(context.getString(R.string.languageSetting), "en") ?: "en"
+            language = getString("languageSetting", "en") ?: "en"
         }
     }
 

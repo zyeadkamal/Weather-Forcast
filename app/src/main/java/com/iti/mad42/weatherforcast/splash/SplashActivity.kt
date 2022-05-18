@@ -65,6 +65,7 @@ class SplashActivity : AppCompatActivity() {
     private fun isFirstUse() = getSharedPreferences(applicationContext).getBoolean("firstUse", true)
 
     private fun openFirstUseDialog() {
+
         firstUseDialog = Dialog(this)
         firstUseDialog.setContentView(R.layout.dialog_first_use)
         firstUseDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -79,19 +80,11 @@ class SplashActivity : AppCompatActivity() {
             if (btnGPS.isChecked || btnMap.isChecked){
                 when (radioGroupLocation.checkedRadioButtonId) {
                     R.id.radioBtnMap -> {
-                        println("MAP")
-                        val sharedPreferences = getSharedPreferences(this)
-                        val editor = sharedPreferences.edit()
-                        editor.putString("locationMethod","map")
-                        editor.commit()
+                        saveLocationMethodInSharedPrefs("map")
                         navigateToMap()
                     }
                     R.id.radioBtnGPS -> {
-                        println("GPS")
-                        val sharedPreferences = getSharedPreferences(this)
-                        val editor = sharedPreferences.edit()
-                        editor.putString("locationMethod","gps")
-                        editor.commit()
+                        saveLocationMethodInSharedPrefs("gps")
                         navigateToHome()
                     }
                 }
@@ -103,7 +96,7 @@ class SplashActivity : AppCompatActivity() {
             }
 
         }
-        firstUseDialog?.show()
+        firstUseDialog.show()
     }
 
     private fun setFirstUseDone() {
@@ -131,4 +124,11 @@ class SplashActivity : AppCompatActivity() {
         finish()
     }
 
+
+    private fun saveLocationMethodInSharedPrefs(value : String) {
+        val sharedPreferences = getSharedPreferences(this)
+        val editor = sharedPreferences.edit()
+        editor.putString("locationMethod",value)
+        editor.commit()
+    }
 }

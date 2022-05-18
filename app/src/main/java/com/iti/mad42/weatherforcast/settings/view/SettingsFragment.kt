@@ -1,7 +1,10 @@
 package com.iti.mad42.weatherforcast.settings.view
 
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +14,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import com.iti.mad42.weatherforcast.MainActivity
 import com.iti.mad42.weatherforcast.R
+import com.iti.mad42.weatherforcast.Utilities.getCurrentLocale
 import com.iti.mad42.weatherforcast.Utilities.getSharedPreferences
 import java.util.*
 
@@ -49,6 +53,11 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val localLang = getCurrentLocale(requireContext())
+        val languageLocale = getSharedPreferences(requireContext()).getString("languageSetting","ar")!!
+
+        Log.e("mn el sharedpref", "onViewCreated: $languageLocale ", )
+        setLocale(languageLocale!!)
         initUI(view)
         setOldValues()
         setClickListeners()
@@ -104,7 +113,7 @@ class SettingsFragment : Fragment() {
 
                     val sharedPreferences = getSharedPreferences(requireContext())
                     val editor = sharedPreferences.edit()
-                    editor.putString(getString(R.string.languageSetting),"ar")
+                    editor.putString("languageSetting","ar")
                     editor.commit()
                     navigateToHome()
                 }
@@ -114,7 +123,7 @@ class SettingsFragment : Fragment() {
 
                     val sharedPreferences = getSharedPreferences(requireContext())
                     val editor = sharedPreferences.edit()
-                    editor.putString(getString(R.string.languageSetting),"en")
+                    editor.putString("languageSetting","en")
                     editor.commit()
                     navigateToHome()
                 }
@@ -155,7 +164,7 @@ class SettingsFragment : Fragment() {
     private fun setOldValues() {
         val locationMethod = getSharedPreferences(requireContext()).getString("locationMethod","en")!!
         Log.e("Settings", "setOldValues:$locationMethod " )
-        val language = getSharedPreferences(requireContext()).getString(getString(R.string.languageSetting),"en")!!
+        val language = getSharedPreferences(requireContext()).getString("languageSetting","en")!!
         Log.e("Settings", "setOldValues:$language " )
         val units = getSharedPreferences(requireContext()).getString(getString(R.string.unitsSetting),"metric")!!
         Log.e("Settings", "setOldValues:$units " )
@@ -197,6 +206,18 @@ class SettingsFragment : Fragment() {
 
     private fun navigateToHome() {
         startActivity(Intent(requireContext(),MainActivity::class.java))
+        activity?.finish()
+    }
+
+    private fun setLocale(lang: String) {
+        val myLocale = Locale(lang)
+        Locale.setDefault(myLocale)
+        val res: Resources = resources
+        val dm: DisplayMetrics = res.displayMetrics
+        val conf: Configuration = res.configuration
+        conf.locale = myLocale
+        conf.setLayoutDirection(myLocale)
+        res.updateConfiguration(conf, dm)
     }
 
 }

@@ -45,7 +45,7 @@
     <string name="Alarm">Alarm</string>
     <string name="add">Add</string>
     <string name="overlay_title">Permission Required</string>
-    <string name="overlay_message">Please Allow Overlay Permission</string>
+    <string name="overlay_message" translatable="false">Please Allow Overlay Permission</string>
     <string name="overlay_postive_button">Ok</string>
     <string name="overlay_negative_button">Cancel</string>
     <string name="fillRequired">Please Fill Required Fields</string>
