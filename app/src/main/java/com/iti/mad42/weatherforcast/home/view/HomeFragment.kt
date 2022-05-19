@@ -76,7 +76,6 @@ class HomeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
     }
 
     override fun onCreateView(
@@ -120,6 +119,7 @@ class HomeFragment : Fragment() {
                             homeFragmentViewModel.getFreshLocation()
                             homeFragmentViewModel.getLastLocation().observe(this){
                                 setSharedPrefsLatAndLon(it)
+                                Log.e("Coordinate", "onViewCreated: ${it.latitude} - ${it.longitude}", )
                                 homeFragmentViewModel.fetchingWeather(it.latitude,it.longitude,language, units)
                             }
                         }else {

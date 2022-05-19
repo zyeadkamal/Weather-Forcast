@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/menu"
-        android:background="#EF7200"
+        android:background="#3E7BC3"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"/>
 

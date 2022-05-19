@@ -11,7 +11,8 @@
         <entry key="app/src/main/res/layout/activity_favourite_weather.xml" value="0.33627717391304346" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/activity_map.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/alert_recyclerview_row.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.19021739130434784" />
+        <entry key="app/src/main/res/layout/alert_recyclerview_row.xml" value="0.335" />
         <entry key="app/src/main/res/layout/daily_recyclerview_row.xml" value="0.335" />
         <entry key="app/src/main/res/layout/dialog_add_alert.xml" value="0.2900717703633436" />
         <entry key="app/src/main/res/layout/dialog_alert.xml" value="0.375" />

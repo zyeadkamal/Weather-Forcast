@@ -82,13 +82,22 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ic_baseline_delete_forever_24"
+            app:layout_constraintEnd_toEndOf="@id/largeConstLayOut"
+            app:layout_constraintTop_toTopOf="@id/largeConstLayOut"
+            app:layout_constraintBottom_toBottomOf="@id/largeConstLayOut"/>
         <Button
             android:id="@+id/btnDeleteAlert"
             android:layout_width="60dp"
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/ic_baseline_delete_forever_24"
+            android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="@id/largeConstLayOut"
             app:layout_constraintTop_toTopOf="@id/largeConstLayOut"
             app:layout_constraintBottom_toBottomOf="@id/largeConstLayOut"

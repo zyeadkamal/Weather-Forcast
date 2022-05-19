@@ -114,7 +114,7 @@ android:fillViewport="true">
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#F6C072"
+            android:background="@color/Light_blue"
             app:layout_constraintBottom_toTopOf="@+id/frameLayoutOfHourlyRecyclerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -123,7 +123,7 @@ android:fillViewport="true">
             android:id="@+id/view3"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#F6BE6B"
+            android:background="@color/Light_blue"
             app:layout_constraintTop_toBottomOf="@+id/frameLayoutOfHourlyRecyclerView"
             tools:layout_editor_absoluteX="16dp" />
 
@@ -154,7 +154,7 @@ android:fillViewport="true">
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dailyTempRecyclerViewFrameLayout"
-            app:strokeColor="@color/Light_Orange"
+            app:strokeColor="@color/Light_blue"
             app:strokeWidth="0.75dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -215,7 +215,7 @@ android:fillViewport="true">
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pressureCardView"
-            app:strokeColor="@color/Light_Orange"
+            app:strokeColor="@color/Light_blue"
             app:strokeWidth="0.75dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -275,7 +275,7 @@ android:fillViewport="true">
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cloudCardView"
-            app:strokeColor="@color/Light_Orange"
+            app:strokeColor="@color/Light_blue"
             app:strokeWidth="0.75dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -337,7 +337,7 @@ android:fillViewport="true">
             app:layout_constraintStart_toEndOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dailyTempRecyclerViewFrameLayout"
-            app:strokeColor="@color/Light_Orange"
+            app:strokeColor="@color/Light_blue"
             app:strokeWidth="0.75dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -398,7 +398,7 @@ android:fillViewport="true">
             app:layout_constraintStart_toEndOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/humidityCardView"
-            app:strokeColor="@color/Light_Orange"
+            app:strokeColor="@color/Light_blue"
             app:strokeWidth="0.75dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -458,7 +458,7 @@ android:fillViewport="true">
             app:layout_constraintStart_toEndOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ultraVioletCardView"
-            app:strokeColor="@color/Light_Orange"
+            app:strokeColor="@color/Light_blue"
             app:strokeWidth="0.75dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -510,8 +510,8 @@ android:fillViewport="true">
             android:id="@+id/view2"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#F5BE69"
-            android:backgroundTint="@color/Light_Orange"
+            android:background="@color/Light_blue"
+            android:backgroundTint="@color/Light_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dailyTempRecyclerViewFrameLayout" />

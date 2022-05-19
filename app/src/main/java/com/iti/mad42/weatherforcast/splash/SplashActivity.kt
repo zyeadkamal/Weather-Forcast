@@ -39,7 +39,7 @@ class SplashActivity : AppCompatActivity() {
 
         val coroutineScope = CoroutineScope(Dispatchers.Main)
         coroutineScope.launch {
-            delay(3000)
+            delay(5000)
 
             if (isFirstUse()) {
                 setFirstUseDone()

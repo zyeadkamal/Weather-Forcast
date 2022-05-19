@@ -154,7 +154,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dailyTempFavouriteRecyclerViewFrameLayout"
-                app:strokeColor="@color/Light_Orange"
+                app:strokeColor="@color/Light_blue"
                 app:strokeWidth="0.75dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -215,7 +215,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pressureFavouriteCardView"
-                app:strokeColor="@color/Light_Orange"
+                app:strokeColor="@color/Light_blue"
                 app:strokeWidth="0.75dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -275,7 +275,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cloudFavouriteCardView"
-                app:strokeColor="@color/Light_Orange"
+                app:strokeColor="@color/Light_blue"
                 app:strokeWidth="0.75dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -337,7 +337,7 @@
                 app:layout_constraintStart_toEndOf="@+id/guideline3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dailyTempFavouriteRecyclerViewFrameLayout"
-                app:strokeColor="@color/Light_Orange"
+                app:strokeColor="@color/Light_blue"
                 app:strokeWidth="0.75dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -398,7 +398,7 @@
                 app:layout_constraintStart_toEndOf="@+id/guideline3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/humidityFavouriteCardView"
-                app:strokeColor="@color/Light_Orange"
+                app:strokeColor="@color/Light_blue"
                 app:strokeWidth="0.75dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -458,7 +458,7 @@
                 app:layout_constraintStart_toEndOf="@+id/guideline3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ultraVioletFavouriteCardView"
-                app:strokeColor="@color/Light_Orange"
+                app:strokeColor="@color/Light_blue"
                 app:strokeWidth="0.75dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -511,7 +511,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#F5BE69"
-                android:backgroundTint="@color/Light_Orange"
+                android:backgroundTint="@color/Light_blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dailyTempFavouriteRecyclerViewFrameLayout" />
